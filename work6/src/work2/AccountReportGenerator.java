@@ -1,16 +1,8 @@
-package work2;
-
-public class AccountReportGenerator implements ReportGenerator {
-
-    @Override
-    public String generateXml() {
-        throw new UnsupportedOperationException();
-    }
-
+public class AccountReportGenerator implements JsonReportGenerator {
     @Override
     public String generateJson() {
         String report = "";
-        // todo Logic
+        // Logic here
         return report;
     }
 }

@@ -1,16 +1,4 @@
-package work1;
-
-// Квадрат
-public class Square extends Rectangle {
-
-    public void setHeight(int height) {
-        this.height = height;
-        this.width = height;
-    }
-
-    @Override
-    public void setWidth(int width) {
-        this.width = width;
-        this.height = width;
-    }
-}
+Rectangle rect = new Square();
+rect.setHeight(10);
+rect.setWidth(20);
+System.out.println("Area: " + rect.calculateArea());
