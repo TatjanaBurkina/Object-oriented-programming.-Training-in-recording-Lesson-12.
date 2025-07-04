@@ -1,4 +1,20 @@
-Rectangle rect = new Square();
-rect.setHeight(10);
-rect.setWidth(20);
-System.out.println("Area: " + rect.calculateArea());
+package work1;
+
+public class Square extends Rectangle {
+
+    public Square(int side) {
+        super(side, side);
+    }
+
+    @Override
+    public void setHeight(int height) {
+        super.setHeight(height);
+        super.setWidth(height);
+    }
+
+    @Override
+    public void setWidth(int width) {
+        super.setWidth(width);
+        super.setHeight(width);
+    }
+}

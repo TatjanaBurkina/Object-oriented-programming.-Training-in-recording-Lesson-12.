@@ -1,28 +1,29 @@
-# Проект work6 — Урок 12. Основы ООП и подготовка к SOLID
+# Project work6 — Seminar 12: Object-Oriented Programming & SOLID Intro
 
-## Описание
+## Description
 
-Проект демонстрирует объектно-ориентированный подход на примере моделирования очереди в магазине и управления учебной группой. Архитектура построена с учётом принципов SOLID, но их реализация находится в стадии подготовки.
+This Java project demonstrates core OOP concepts and introduces SOLID principles via simple class structures and substitutions. The project is designed for educational purposes and includes examples that intentionally illustrate both proper and violated design approaches.
 
-## Элементы проекта
+## Project Structure
 
-- Классы: `Market`, `Student`, `Teacher`, `StudentGroup`, `StudentGroupService`, `Controller`, `HotDrink`
-- Интерфейсы: `QueueBehavior`, `MarketBehavior`
-- Примеры запуска: `Main`, `Controller`
-- Использование коллекций: `Queue`, `List`
+- Core classes: `Rectangle`, `Square`, `Greeter`
+- Report generators: `AccountReportGenerator`, `DocumentReportGenerator`
+- Interfaces: `JsonReportGenerator`, `ReportGenerator`
+- Entry point: `Main.java`
 
-## Принципы SOLID (в подготовке)
+## SOLID Principles in Code
 
-SOLID-принципы не реализованы в полном объёме, но проект структурирован с возможностью их внедрения:
+| Principle | Implementation |
+|----------|----------------|
+| SRP (Single Responsibility) | `Greeter` focuses solely on greeting logic. `AccountReportGenerator` handles only JSON report generation |
+| LSP (Liskov Substitution) | `Square extends Rectangle` — in `Main.java` we intentionally violate expectations to illustrate LSP breakage |
+| ISP (Interface Segregation) | Separated interfaces `JsonReportGenerator` and `XmlReportGenerator` allow classes to implement only what they need |
+| OCP, DIP | Not yet implemented — planned for future iterations |
 
-- Разделение интерфейсов (`QueueBehavior`, `MarketBehavior`) — частичная реализация Interface Segregation
-- Класс `StudentGroupService` имеет узкую зону ответственности (Single Responsibility)
-- Вывод информации и бизнес-логика в `Market` пока не разделены — можно вынести в отдельный компонент
+> Note: The project is intentionally minimalistic to demonstrate concepts clearly.
 
-Дополнительные классы (`MarketPrinter`, `OrderService`, `ExpressMarket`) будут добавлены в следующих версиях проекта.
-
-## Как запустить
+## How to Run
 
 ```bash
-javac *.java
+javac Main.java work1/*.java work2/*.java
 java Main
